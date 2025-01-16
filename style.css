@@ -48,3 +48,10 @@ form button {
 form button:hover {
     background-color: #218838;
 }
+
+.doce {
+    width: 150px;
+    height: 150px;
+    border-radius: 45px;
+}
+
