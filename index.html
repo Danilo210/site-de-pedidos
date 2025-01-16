@@ -9,9 +9,14 @@
  
 </head>
 <body>
-    <h1>Faça seu Pedido de Doces</h1>
+    <h1>Doces do [marca]</h1>
+    <h2>Faça seu Pedido de Doces!</h2>
+
+    <p>Faça seu Pedido de Doces seleciaonando a quandtidade e preenchedo o fomulario abaixo do cardápio.</p>
+
 
     <div id="products">
+
         <div class="product" data-flavor="Brigadeiro">
             <span>Brigadeiro</span>
             <div>
@@ -20,6 +25,7 @@
                 <button onclick="addItem('Brigadeiro')">+1</button>
             </div>
         </div>
+
         <div class="product" data-flavor="Beijinho">
             <span>Beijinho</span>
             <div>
@@ -28,21 +34,26 @@
                 <button onclick="addItem('Beijinho')">+1</button>
             </div>
         </div>
-        <div class="product" data-flavor="Cajuzinho">
-            <span>Cajuzinho</span>
+
+        <div class="product" data-flavor="Maracujá">
+            <span>Maracujá</span>
             <div>
-                <button onclick="removeItem('Cajuzinho')">-1</button>
-                <span id="Cajuzinho-count">0</span>
-                <button onclick="addItem('Cajuzinho')">+1</button>
+                <button onclick="removeItem('Maracujá')">-1</button>
+                <span id="Maracujá-count">0</span>
+                <button onclick="addItem('Maracujá')">+1</button>
             </div>
         </div>
+
     </div>
 
     <form onsubmit="makeOrder(event)">
         <input type="text" id="name" placeholder="Seu Nome" required>
         <input type="text" id="address" placeholder="Endereço" required>
-        <input type="text" id="phone" placeholder="Telefone" required>
-        <input type="text" id="contact" placeholder="Contato (WhatsApp)" required>
+        <input type="number" id="number" placeholder="Numero da residencia" required>
+        <input type="text" id="complement" placeholder="Complemento">
+        <input type="tel" id="contact" placeholder="Contato (WhatsApp)" maxlength="11" required>
+        <input type="text" id="obs" placeholder="Osbervação">
+
         <button type="submit">Fazer Pedido</button>
     </form>
 
